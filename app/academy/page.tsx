@@ -1,0 +1,2 @@
+import {courses} from "@/lib/data";
+export default function Academy(){return <main className="container"><h1>交易知识学院</h1><p className="muted">六阶段学习路径，帮助用户建立市场知识、平台识别与风险意识。</p><section className="grid">{courses.map(c=><article className="card" key={c.stage}><span className="tag">阶段 {c.stage}</span><h3>{c.title}</h3><p className="muted">{c.desc}</p></article>)}</section><div className="notice">学院内容用于教育与信息参考，不提供个性化投资建议或收益保证。</div></main>}
