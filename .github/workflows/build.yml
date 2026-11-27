@@ -3,6 +3,7 @@ name: Build
 on:
   push:
     branches:
+      - main
       - feature/database-v2
   pull_request:
     branches:
@@ -25,3 +26,5 @@ jobs:
         env:
           NEXT_PUBLIC_SUPABASE_URL: https://example.supabase.co
           NEXT_PUBLIC_SUPABASE_ANON_KEY: ci-placeholder-anon-key
+      - name: Check TypeScript types
+        run: npx tsc --noEmit
