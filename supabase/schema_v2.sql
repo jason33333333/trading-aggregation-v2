@@ -473,7 +473,7 @@ create policy audit_admin_insert on public.admin_audit_logs
 revoke all on function public.is_staff() from public, anon;
 revoke all on function public.is_admin() from public, anon;
 revoke all on function public.is_email_verified() from public, anon;
-grant execute on function public.is_staff() to authenticated;
+grant execute on function public.is_staff() to anon, authenticated;
 grant execute on function public.is_admin() to authenticated;
 grant execute on function public.is_email_verified() to authenticated;
 
